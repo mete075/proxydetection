@@ -1,0 +1,1 @@
+web: gunicorn proxydetection.wsgi --log-file -

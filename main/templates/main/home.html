@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zalando</title>
+        <link rel="stylesheet" href="{% static 'main/home.css' %}">
+    </head>
+    <body>
+        <div class="topnav-links">
+            <a href="{% url 'login' %}">Mijn account</a>
+            <a href="{% url 'login' %}">Mijn bestellingen</a>
+            <a href="#">Items terugsturen</a>
+        </div>
+
+        {% if user.is_authenticated %}
+        <div class="topnav">
+            <div class="logo-container">
+            <img class="topnav-logo" alt="kadaster_logo" src="https://1000logos.net/wp-content/uploads/2021/09/Zalando-Logo.jpg">
+            </div>
+            <a href="#">Home</a>
+            
+            
+            <a href="{% url 'logout' %}">Logout</a>
+            
+            <a href="#">Over ons</a>
+          </div>
+          {% else %}
+          <div class="topnav">
+            <div class="logo-container">
+            <img class="topnav-logo" alt="kadaster_logo" src="https://1000logos.net/wp-content/uploads/2021/09/Zalando-Logo.jpg">
+            </div>
+            <a href="#">Home</a>
+            
+            <a href="{% url 'register' %}">Registratie</a>
+            <a href="{% url 'login' %}">Login</a>
+            
+            <a href="#">Over ons</a>
+          </div>
+          {% endif %}
+        <div class="promo-tekst">
+            <p>BLACK FRIDAY KORTING 50% OP=OP</p>
+        </div>
+
+        <div class="fotos">
+            <img class= "kleren" src="https://i8.amplience.net/i/jpl/jd_667627_a" alt=""> 
+            <img class= "kleren" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTluO-tQiAhAE5_iRc4e_XhgjfJ-BXz6BMcPJymmpw1dqfWIswfko3RRhyArm05IUnH3YaKxF8UVIGwQU7USCfKqM9bIcdwjERNfNNxmLa9xLZOlB5Ou9h0HowyJicw29boGByiEg&usqp=CAc" alt=""> 
+            <img class= "kleren" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTI-cxONYSoBNTmCyGoKqX8pdOebR_bVcCuIaMpN1tLsWWhtWe2D2jCXRd6kK5CsbG5IFw-a2_AzIr2VqgNNbLPxhdl76Vgf2gySdQ8afeN6fRfa8hx3kkmRA_SgT2zfhrKHGW3LA&usqp=CAc" alt=""> 
+            <img class= "kleren" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ8tPdcWLzJ8Pl8O5lqDcsjq7XUi8Ev9GBKzQ-kWYesYxKVLRUBGj1YHDGuD5W-M9BHNs1DazevwEqKov630PDuvy1-YjivwBQ5-uwtsVE7loFh2Y-NHY_SwriZKBFOFAJKC-UHEW0qfic&usqp=CAc" alt=""> 
+            <img class= "kleren" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRTfNdisaPPuqIzXJlAezOls5XsFX9_yrevo2oyX3ZMrmECYjrXal4O4j8mMSE6M_pc0pj0GBYhhJVb5I1zPNMre_mx8pH7ojxUKqJI-lrrc2dpTtNgNs0mKaqEn5CxMCi-iOWv_wqGZW8&usqp=CAc" alt=""> 
+            <img class= "kleren" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSDhDsieDaIq12_zNm-BfWLuJ_HQE_O5ufp9TndEqbo3Tn368ZhvwpS4-mmQuErc2UgcyOtJiQ9UqC5eS7gCKrqIyvM5olcgzmZbRnQ6eKhX45dna4KEvRWEY3KqgE5FyInglDMAg&usqp=CAc" alt=""> 
+        </div>
+
+        <footer>
+            <div class="footer-column">
+                <h3>Vragen?</h3>
+                <p>Kunt u een antwoord niet vinden? Hebt u een klacht? Onze medewerkers helpen u graag <a style="color:white;" href="#" >hier.</a></p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Klantenservice</h3>
+                <p>Email: zalando@example.com</p>
+                <p>Telefoon: 055 - 55 55 55</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Mijn account</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Sociale media</h3>
+                <ul>
+                    <li><a href="#">Facebook: zalandoNL</a></li>
+                    <li><a href="#">Twitter: @ZalandoNL</a></li>
+                    <li><a href="#">LinkedIn: @Zalando</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
